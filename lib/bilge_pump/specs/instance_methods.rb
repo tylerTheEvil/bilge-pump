@@ -107,7 +107,7 @@ module BilgePump
         attributes = Hash.new
         names.each { |n| attributes[n] = model.send n }
 
-        attributes_to_assert.stringify_keys.should == attributes
+        expect(attributes_to_assert.stringify_keys).to eq(attributes)
       end
     end
   end
