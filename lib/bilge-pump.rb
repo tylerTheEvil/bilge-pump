@@ -4,7 +4,7 @@ module BilgePump
   autoload :Options, 'bilge_pump/options'
   autoload :OptionsSupport, 'bilge_pump/options_support'
   autoload :ModelLocation, 'bilge_pump/model_location'
-  autoload :MongoMapper, 'bilge_pump/mongo_mapper'
+  autoload :Mongoid, 'bilge_pump/mongoid'
   autoload :Specs, 'bilge_pump/specs'
 
   module Assertions

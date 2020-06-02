@@ -69,7 +69,7 @@ module BilgePump
       def association_parameters_for(model)
         reflection = model_class.reflect_on_association(model.class.model_name.singular.to_sym)
         if reflection
-          { reflection.association_foreign_key => model.to_param }
+          { reflection.foreign_key => model.to_param }
         else
           { "#{model.class.model_name.singular}_id" => model.to_param }
         end
