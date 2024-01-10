@@ -5,7 +5,7 @@ module BilgePump
     def self.included(mod)
       mod.respond_to :html
       mod.extend ClassMethods
-      mod.before_filter :find_scoping_models
+      mod.before_action :find_scoping_models
       mod.bilge_pump_options.unsupported_actions(
         [:index, :show, :create, :update, :new, :edit, :destroy]
       ).each {|m| mod.send :undef_method, m}
